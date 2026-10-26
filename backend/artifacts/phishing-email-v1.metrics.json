@@ -1,0 +1,98 @@
+{
+  "model_version": "email-phishing-tfidf-v1",
+  "dataset": {
+    "id": "zefang-liu/phishing-email-dataset",
+    "revision": "34085a032c123ca237f314a01a67909cdea35e34",
+    "license": "LGPL-3.0",
+    "sha256": "18ef4fff1acb8986f0ab01e83ede6025420c829656af5a377560fce17e153b97",
+    "class_counts_after_exact_deduplication": {
+      "Safe Email": 10977,
+      "Phishing Email": 6536
+    }
+  },
+  "feature_configuration": {
+    "vectorizer": "TfidfVectorizer",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 100000,
+    "sublinear_tf": true
+  },
+  "split_configuration": {
+    "train_fraction_approx": 0.6,
+    "validation_fraction_approx": 0.2,
+    "test_fraction_approx": 0.2,
+    "random_seeds": [
+      42,
+      43
+    ],
+    "grouping": "64-bit word-trigram SimHash LSH; Hamming distance <= 3",
+    "near_duplicate_groups": 218,
+    "emails_in_near_duplicate_groups": 536,
+    "candidate_comparisons": 4595519,
+    "oversized_lsh_buckets_skipped": 45,
+    "simhash_hamming_distance_threshold": 3,
+    "split_rows": {
+      "train": 10505,
+      "validation": 3509,
+      "test": 3499
+    }
+  },
+  "validation_model_comparison": {
+    "logistic_regression": {
+      "accuracy": 0.9831860929039612,
+      "precision_phishing": 0.9762452107279693,
+      "recall_phishing": 0.978494623655914,
+      "f1_phishing": 0.9773686229382432,
+      "confusion_matrix_labels_0_legitimate_1_phishing": [
+        [
+          2176,
+          31
+        ],
+        [
+          28,
+          1274
+        ]
+      ],
+      "roc_auc": 0.9980984954310298
+    },
+    "multinomial_naive_bayes": {
+      "accuracy": 0.9717868338557993,
+      "precision_phishing": 0.9918233851185609,
+      "recall_phishing": 0.9316436251920123,
+      "f1_phishing": 0.9607920792079208,
+      "confusion_matrix_labels_0_legitimate_1_phishing": [
+        [
+          2197,
+          10
+        ],
+        [
+          89,
+          1213
+        ]
+      ],
+      "roc_auc": 0.9983633279670813
+    }
+  },
+  "selected_model": "logistic_regression",
+  "test_metrics": {
+    "accuracy": 0.9817090597313518,
+    "precision_phishing": 0.9756283320639756,
+    "recall_phishing": 0.9756283320639756,
+    "f1_phishing": 0.9756283320639756,
+    "confusion_matrix_labels_0_legitimate_1_phishing": [
+      [
+        2154,
+        32
+      ],
+      [
+        32,
+        1281
+      ]
+    ],
+    "roc_auc": 0.9975371208737454
+  },
+  "probability_calibration": "Uncalibrated predict_proba output; treated as a model score."
+}

@@ -1,0 +1,9 @@
+Unnamed: 0,Email Text,Email Type
+0,"Synthetic benign message: please review the team meeting agenda.",Safe Email
+1,"Synthetic benign message: the project meeting is moved to Monday.",Safe Email
+2,"Synthetic benign message: attached are notes from our planning session.",Safe Email
+3,"Synthetic benign message: the office calendar has been updated.",Safe Email
+4,"Synthetic phishing message: urgently verify your account password.",Phishing Email
+5,"Synthetic phishing message: click to confirm account payment details.",Phishing Email
+6,"Synthetic phishing message: claim your prize and provide login information.",Phishing Email
+7,"Synthetic phishing message: reset credentials now to avoid account closure.",Phishing Email

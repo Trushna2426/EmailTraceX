@@ -1,0 +1,66 @@
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node and Vite
+node_modules
+dist
+dist-ssr
+.vite
+coverage
+*.tsbuildinfo
+*.local
+
+# Local environment and credentials
+.bolt/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.env
+.env.*
+!.env.example
+
+# Python environments, bytecode, and test/tool caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.pytest-sandbox/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.coverage
+htmlcov/
+
+# Local databases and backups
+*.sqlite
+*.sqlite3
+*.db
+*.dump
+*.bak
+*.backup
+*.sql
+*.sql.gz
+backups/
+
+# Downloaded/generated ML datasets
+backend/data/raw/
+backend/data/processed/
+
+# Retain the deployed model and its evaluation metadata only.
+backend/artifacts/*
+!backend/artifacts/phishing-email-v1.joblib
+!backend/artifacts/phishing-email-v1.metrics.json
