@@ -65,7 +65,7 @@ export default function Dashboard({ user }: { user: User }) {
           ].map(item => (
             <div key={item.label} className="rounded-xl border border-teal-900/30 p-4" style={{ background: 'var(--card-bg)' }}>
               <p className="text-xs text-slate-500">{item.label}</p>
-              <p className="mt-2 text-xl font-semibold text-slate-100">{item.value}</p>
+              <p className="mt-2 text-xl font-semibold text-black-100">{item.value}</p>
             </div>
           ))}
         </div>

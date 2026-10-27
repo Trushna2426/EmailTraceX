@@ -161,9 +161,15 @@ export default function Entry({ onLogin, onAuthenticated, initialError = '' }: E
           <h1 className="mt-5 max-w-lg text-3xl font-bold leading-tight text-white sm:text-4xl xl:text-5xl">
             Investigate threats. Trace evidence. Protect communication.
           </h1>
-          <p className="mt-5 max-w-md text-sm leading-6 text-slate-200">
+          
+            {theme === 'dark' ? 
+           <p className="mt-5 max-w-md text-sm leading-6 text-slate-200">
             An evidence-first workspace for understanding suspicious email, following digital indicators, and coordinating security investigations.
-          </p>
+           </p> : 
+           <p className="mt-5 max-w-md text-sm leading-6 text-slate-300">
+            An evidence-first workspace for understanding suspicious email, following digital indicators, and coordinating security investigations.
+           </p>
+          }
         </div>
 
         <div className="relative flex items-end justify-between gap-4">
@@ -176,7 +182,9 @@ export default function Entry({ onLogin, onAuthenticated, initialError = '' }: E
               alt="Police cyber operations centre with staff monitoring workstations"
               className="h-20 w-full object-cover sm:h-24"
             />
-            <figcaption className="bg-[#041515]/90 px-2 py-1 text-[9px] text-slate-200">Cyber operations centre</figcaption>
+            {theme === 'dark' ?  <figcaption className="bg-[#041515]/90 px-2 py-1 text-[9px] text-slate-450">Cyber operations centre</figcaption>
+             :  <figcaption className="bg-[#041515]/90 px-2 py-1 text-[9px] text-slate-300">Cyber operations centre</figcaption>}
+           
           </figure>
         </div>
       </section>
